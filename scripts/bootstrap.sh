@@ -33,13 +33,6 @@ fi
 sudo chmod 755 /home/vagrant
 sudo chown vagrant:vagrant /home/vagrant
 
-# Create a directory for local code
-if [ ! -d /home/vagrant/code ]; then
-  sudo mkdir /home/vagrant/code
-  sudo chmod 755 /home/vagrant/code
-  sudo chown vagrant:vagrant /home/vagrant/code
-fi
-
 # Store time which box was provisioned
 date > /home/vagrant/.VAGRANT_PROVISIONED_AT
 sudo chmod 755 /home/vagrant/.VAGRANT_PROVISIONED_AT
