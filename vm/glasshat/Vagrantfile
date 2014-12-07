@@ -22,5 +22,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "https://raw.github.com/martyla/vagrant/master/scripts/bootstrap.sh"
   config.vm.provision "shell", path: "https://raw.github.com/martyla/vagrant/master/scripts/dotfiles.sh"
   config.vm.provision "shell", path: "https://raw.github.com/martyla/vagrant/master/scripts/node.sh"
+  config.vm.provision "shell", path: "https://raw.github.com/martyla/vagrant/master/scripts/ruby.sh"
   config.vm.provision "shell", path: "https://raw.github.com/martyla/vagrant/master/scripts/glasshat.sh"
 end
