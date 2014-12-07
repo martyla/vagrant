@@ -6,6 +6,9 @@ cat << EOF
 ********
 EOF
 
+# Import GPG key
+command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+
 # Download and install Ruby Version Manager
 curl -sSL https://get.rvm.io | bash -s stable
 
