@@ -21,6 +21,16 @@ sudo locale-gen en_AU.UTF-8
 echo "Installing curl, wget, git, vim, build-essential"
 sudo apt-get install -y curl wget git-core vim build-essential
 
+# Add some sshd config
+echo "Updating sshd_config"
+sudo cat <<EOT >> /etc/ssh/sshd_config
+UseDNS no
+GSSAPIAuthentication no
+EOT
+
+echo "Reloading sshd config"
+sudo service ssh reload
+
 # Give access to bin folder for vagrant
 sudo chmod 755 /usr/bin
 sudo chown vagrant:vagrant /usr/bin
