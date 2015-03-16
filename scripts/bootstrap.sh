@@ -38,5 +38,8 @@ date > /home/vagrant/.VAGRANT_PROVISIONED_AT
 sudo chmod 755 /home/vagrant/.VAGRANT_PROVISIONED_AT
 sudo chown vagrant:vagrant /home/vagrant/.VAGRANT_PROVISIONED_AT
 
-# Add some ssh configuration
-
+# Disable extended bash completion as it is slow
+echo "Disabling extended bash completions"
+sudo apt-get remove -y bash-completion
+sudo dpkg --purge bash-completion
+complete -r
