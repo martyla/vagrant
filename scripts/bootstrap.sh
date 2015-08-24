@@ -43,3 +43,9 @@ echo "Disabling extended bash completions"
 sudo apt-get remove -y bash-completion
 sudo dpkg --purge bash-completion
 complete -r
+
+# Use zsh shell
+echo "Switching shell to zsh"
+sudo apt-get install -y zsh
+sudo chsh -s /bin/zsh vagrant
+zsh

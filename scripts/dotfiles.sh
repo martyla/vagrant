@@ -20,7 +20,7 @@ git clone https://github.com/martyla/dotfiles.git .dotfiles
 cd .dotfiles
 
 echo "Installing dotfiles"
-./bootstrap.sh -f
+./bootstrap.zsh -f
 
 cd $OLD_DIR
 export HOME=$OLD_HOME
@@ -28,4 +28,4 @@ export HOME=$OLD_HOME
 # Fix permissions - could make less hacky by running this non root
 sudo chown -R vagrant:vagrant /home/vagrant
 
-echo "Done."
+echo "Done installing dotfiles."
